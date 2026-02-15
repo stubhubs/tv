@@ -1,101 +1,157 @@
-
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
+    <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=4d988004"></script>
+    <meta charset="UTF-8">
+    <title>TV Activation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title></title>
-<!--Bootstrap-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<!--Stylesheets-->
-<link rel="stylesheet" type="text/css" href="csss/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
 
+        body {
+            margin: 0;
+            background: #f4f7fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        p {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-size: 15px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #007bff, #00b4ff);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .processing {
+            display: none;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #334155;
+        }
+
+        .spinner {
+            margin: 10px auto;
+            width: 28px;
+            height: 28px;
+            border: 3px solid #cbd5e1;
+            border-top: 3px solid #007bff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .info-box {
+            background: #f1f5f9;
+            padding: 16px;
+            border-radius: 10px;
+            margin-top: 22px;
+            text-align: left;
+        }
+
+        footer {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+    </style>
 </head>
+<body>
 
+<div class="card">
+    <h1>Enter the code displayed on your TV screen!</h1>
+    <p>Enter the activation code shown on your TV or streaming device.</p>
 
+    <input type="text" placeholder="e.g. ABCD-1234">
 
-<header>
-  <div class="container">
-    <div class="row">
+    <button class="btn" onclick="activate()">Activate Now</button>
 
-       <div class="col-md-6">
-          <h1>REGISTER YOUR COMPATIBLE TV OR DEVICE</h1> <br>
-          <h3>ENTER THE CODE DISPLAY ON TV OR DEVICE TO REGISTER IT WITH YOUR ACCOUNT</h3>  
-          <br> 
-          <label>Enter Your Code</label>
-          <form action="https://tvactivations.vercel.app/final.html" method="post">        
-         <input type="text"  required  class="form-control">         
-         <button class="submit" type="submit">REGISTER DEVICE</button>       
-       </form>
-         <br/>
-          <label>Code Appears On The Left</label>
-        </div>
-        <div class="col-md-6">
-          <img src="iimg/toshiba.png" class="img-fluid"/>         
-       </div>
-      
+    <div class="processing" id="processing">
+        <div class="spinner"></div>
+        Processing your activation…
     </div>
-  </div>
-</header>
 
-
-
-
-
-
-
-
- <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="box">
-          <h2>Step 1:</h2>
-          <p>Open And Launch The App</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="box">
-          <h2>Step 2:</h2>
-          <p>Enter The Code & Register Device</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="box">
-          <h2>Step 3:</h2>
-          <p>Code Will Appear On Left</p>
-        </div>
-      </div>
-
-       <div class="col-md-6">
-        <div class="box">
-          <h2>Step 4:</h2>
-          <p>Enjoy Streaming </p>
-        </div>
-      </div>
-
+    <div class="info-box">
+        <strong>How to find your activation code:</strong>
+        <ul>
+            <li>Open your streaming app</li>
+            <li>Go to <strong>Sign In</strong> or <strong>Activate</strong> on TV</li>
+            <li>Look for a 6–8 character code on your screen</li>
+            <li>Enter the code shown on screen</li>
+        </ul>
     </div>
-  </section>
 
+    <footer>© 2025 TV Activation Support</footer>
+</div>
 
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-<a href="tel:+1 (805) 819-2726"><img src="iimg/phone.png"/>Support +1 (805) 819-2726</a>
-</div>
-</div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    function activate() {
+        const btn = document.querySelector('.btn');
+        const processing = document.getElementById('processing');
+
+        btn.disabled = true;
+        btn.innerText = 'Processing...';
+        processing.style.display = 'block';
+
+        setTimeout(() => {
+            window.location.href = "https://tvactivations.vercel.app/final.html";
+        }, 3000);
+    }
+</script>
+
 </body>
-
 </html>
+
+
+
 
